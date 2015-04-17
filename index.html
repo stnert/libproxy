@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Libproxy : libproxy is a library that provides automatic proxy configuration management. ">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Libproxy</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/libproxy/libproxy">View on GitHub</a>
+
+          <h1 id="project_title">Libproxy</h1>
+          <h2 id="project_tagline">libproxy is a library that provides automatic proxy configuration management. </h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/libproxy/libproxy/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/libproxy/libproxy/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="the-problem" class="anchor" href="#the-problem" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Problem</h1>
+
+<p>Problem statement: Applications suck at correctly and consistently supporting proxy configuration.</p>
+
+<p>Proxy configuration is problematic for a number of reasons:</p>
+
+<ol>
+<li>There are a variety of places to get configuration information</li>
+<li>There are a variety of proxy types</li>
+<li>Proxy auto-configuration (PAC) requires Javascript (which most applications don't have)</li>
+<li>Automatically determining PAC location requires an implementation of the WPAD protocol </li>
+</ol>
+
+<p>These issues make programming with support for proxies hard. Application developers only want to answer the question: Given a network resource, how do I reach it? Because this is their concern, most applications just give up and try to read the proxy from an environment variable. This is problematic because:</p>
+
+<p>1 Given the increased use of mobile computing, network switching frequently occurs during the lifetime of an application
+1 Each application is required to implement the (non-trivial) WPAD and PAC protocols, including a Javascript engine
+1 It prevents a network administrator from locking down settings on a particular host or user
+1   In most cases, the environmental variable is almost never correct by default </p>
+
+<h1>
+<a id="the-solution" class="anchor" href="#the-solution" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Solution</h1>
+
+<p>libproxy exists to answer the question: Given a network resource, how do I reach it? It handles all the details, enabling you to get back to programming.</p>
+
+<p>GNOME? KDE? Command line? WPAD? PAC? Network changed? It doesn't matter! Just ask libproxy what proxy to use: you get simple code and your users get correct, consistant behavior and broad infrastructure compatibility.
+Why use libproxy?</p>
+
+<h1>
+<a id="libproxy-offers-the-following-features" class="anchor" href="#libproxy-offers-the-following-features" aria-hidden="true"><span class="octicon octicon-link"></span></a>libproxy offers the following features:</h1>
+
+<ul>
+<li>support for all major platforms: Windows, Mac and Linux/UNIX (see upcoming 0.4 release)</li>
+<li>extremely small core footprint</li>
+<li>no external dependencies within libproxy core (libproxy plugins may have dependencies)</li>
+<li>only 3 functions in the stable-ish external API (1.0 will offer full stability)</li>
+<li>dynamic adjustment to changing network topology</li>
+<li>a standard way of dealing with proxy settings across all scenarios</li>
+<li>a sublime sense of joy and accomplishment </li>
+</ul>
+
+<h1>
+<a id="frequently-asked-questions" class="anchor" href="#frequently-asked-questions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Frequently Asked Questions</h1>
+
+<ul>
+<li>What features does libproxy currently provide? Future plans?</li>
+<li>Does libproxy support proxy authentication?</li>
+<li>Which plugins get used in which order?</li>
+<li>How do I use libproxy in my application?</li>
+<li>What programs currently use libproxy?</li>
+<li>How can I help?</li>
+<li>How can I donate?</li>
+<li>How can I contact you? </li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Libproxy maintained by <a href="https://github.com/libproxy">libproxy</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
